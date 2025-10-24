@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananay Srivastava - AI/ML Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Phase 1: devdoq Loading Screen with Three.js Wireframe -->
+    <div id="loading-screen" class="loading-screen">
+        <canvas id="wireframe-canvas" class="wireframe-canvas"></canvas>
+        <div class="loading-content">
+            <div class="loading-counter">
+                <span id="loading-percentage">0</span><span class="percent-symbol">%</span>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouncing CSS Cubes Background -->
+    <div class="bouncing-cubes-container">
+        <div class="cube cube-1"></div>
+        <div class="cube cube-2"></div>
+        <div class="cube cube-3"></div>
+        <div class="cube cube-4"></div>
+        <div class="cube cube-5"></div>
+        <div class="cube cube-6"></div>
+        <div class="cube cube-7"></div>
+        <div class="cube cube-8"></div>
+        <div class="cube cube-9"></div>
+        <div class="cube cube-10"></div>
+    </div>
+
+    <!-- Phase 2: devdoq Style Geometric Transition -->
+    <div id="transition-screen" class="transition-screen hidden">
+        <div class="geometric-shapes">
+            <div class="shape-row row-up">
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+            </div>
+            <div class="shape-row row-down">
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+            </div>
+            <div class="shape-row row-up">
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+                <div class="geometric-shape"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phase 3: Main Website Content - PERFECTLY CENTERED -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Semi-Circle Navigation Button -->
+        <div class="nav-trigger" id="nav-trigger" title="Open Menu">
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+        </div>
+
+        <!-- Menu Backdrop -->
+        <div class="menu-backdrop" id="menu-backdrop"></div>
+
+        <!-- Vertical Navigation Menu -->
+        <nav class="vertical-menu" id="vertical-menu">
+            <ul class="menu-list">
+                <li class="menu-item active" data-section="home">
+                    <span class="menu-text">HOME</span>
+                </li>
+                <li class="menu-item" data-section="about">
+                    <span class="menu-text">ABOUT</span>
+                </li>
+                <li class="menu-item" data-section="tech-stack">
+                    <span class="menu-text">TECH STACK</span>
+                </li>
+                <li class="menu-item" data-section="projects">
+                    <span class="menu-text">PROJECTS</span>
+                </li>
+                <li class="menu-item" data-section="experience">
+                    <span class="menu-text">EXPERIENCE</span>
+                </li>
+                <li class="menu-item" data-section="contact">
+                    <span class="menu-text">CONTACT</span>
+                </li>
+                <li class="menu-item" data-section="blog">
+                    <span class="menu-text">BLOG</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Content Blur Overlay -->
+        <div class="blur-overlay" id="blur-overlay"></div>
+
+        <!-- Bouncing Rubik's Cube Background -->
+        <canvas id="rubiks-cube-canvas" class="rubiks-cube-canvas"></canvas>
+
+        <!-- Main Content Container - CSS GRID CENTERED -->
+        <div class="main-container">
+            <!-- Home Section -->
+            <section class="home-section section active" id="home-section">
+                <div class="home-content">
+                    <div class="profile-picture-box">
+                        <div class="profile-placeholder">
+                            <span class="profile-initials">AS</span>
+                        </div>
+                    </div>
+                    <div class="name-equation-container">
+                        <div class="name-box">
+                            <h1 class="name-display">ANANAY SRIVASTAVA</h1>
+                        </div>
+                        <div class="clock-container">
+                            <div id="current-date">24 October 2025</div>
+                            <div id="current-day">Friday</div>
+                            <canvas id="clock-canvas" width="200" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Projects Section -->
+            <section class="projects-section section" id="projects-section">
+                <div class="section-container">
+                    <h1 class="section-title" style="font-size: 3rem; color: #ffffff !important; text-align: center; margin: 200px 0 60px 0; padding: 150px 0 20px 0; font-weight: bold; letter-spacing: 3px; display: block !important; visibility: visible !important; opacity: 1 !important; text-transform: uppercase; font-family: monospace; position: relative; z-index: 1000; background: transparent !important;">PROJECTS</h1>
+                    <div class="content-box">
+                        <h3>New Delhi House Price Prediction</h3>
+                        <p>Machine learning model for predicting house prices using data analysis and regression techniques</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Neural Network from Scratch</h3>
+                        <p>Mathematical implementation of neural networks using NumPy for deep understanding of ML fundamentals</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Mathematics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Planet Orbits Simulation</h3>
+                        <p>Physics-based simulation of planetary motion and orbital mechanics using Python</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Physics Simulation</span>
+                            <span class="tech-tag">Visualization</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>AI Agriculture Yield Production</h3>
+                        <p>Machine learning system for predicting crop yields using agricultural data and environmental factors</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Jupyter Notebook</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Ensemble Model Water Classification</h3>
+                        <p>Environmental ML project for water quality classification using ensemble methods</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Ensemble Learning</span>
+                            <span class="tech-tag">Environmental Science</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section section" id="about-section">
+                <h2 class="section-title">ABOUT</h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a Computer Science Student and Open Source Contributor, passionate about building AI/ML solutions to solve real-world problems. 
+                        Specialized in Machine Learning, Deep Learning, and Data Science with a focus on creating intelligent systems that make a difference.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Current Status:</span>
+                            <span class="detail-value">B.Tech Computer Science Student</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Location:</span>
+                            <span class="detail-value">India</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Focus Areas:</span>
+                            <span class="detail-value">AI, ML, Deep Learning, Data Science</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section section" id="experience-section">
+                <div class="section-container">
+                    <h1 class="section-title">EXPERIENCE</h1>
+                    <div class="content-box">
+                        <h3>GirlScript Summer of Code 2025 - CONTRIBUTOR</h3>
+                        <p class="experience-description">Active contributor to open source projects, collaborating with developers worldwide on various software development initiatives.</p>
+                        <span class="experience-category">Open Source</span>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>10.DEVS-BROSTACK - MEMBER</h3>
+                        <p class="experience-description">Member of developer community focused on modern web technologies and collaborative development practices.</p>
+                        <span class="experience-category">Community</span>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>GitHub Activity - ACTIVE DEVELOPER</h3>
+                        <p class="experience-description">181+ contributions in the last year with consistent open source development and project contributions.</p>
+                        <span class="experience-category">Development</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack Section -->
+            <section class="tech-stack-section section" id="tech-stack-section">
+                <div class="section-container">
+                    <h1 class="section-title" style="font-size: 2.5rem; color: #ffffff !important; text-align: center; margin: 120px 0 40px 0; padding-top: 80px; font-weight: bold; letter-spacing: 2px; display: block !important; visibility: visible !important; opacity: 1 !important; text-transform: uppercase; font-family: monospace;">TECH STACK</h1>
+                    <div class="content-box">
+                        <h3>Languages</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">C</span>
+                            <span class="tech-item">Java</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">HTML5</span>
+                            <span class="tech-item">CSS3</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Frameworks</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Flask</span>
+                            <span class="tech-item">FastAPI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>ML Libraries</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">NumPy</span>
+                            <span class="tech-item">Pandas</span>
+                            <span class="tech-item">Matplotlib</span>
+                            <span class="tech-item">scikit-learn</span>
+                            <span class="tech-item">TensorFlow</span>
+                            <span class="tech-item">PyTorch</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Databases</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">MySQL</span>
+                            <span class="tech-item">MongoDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-box">
+                        <h3>Tools</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Git</span>
+                            <span class="tech-item">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Contact Section -->
+            <section class="contact-section section" id="contact-section">
+                <h2 class="section-title">CONTACT</h2>
+                <div class="contact-container">
+                    <div class="contact-links-box">
+                        <h3>Connect with me</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/Ananay8425" target="_blank" class="social-link" data-social="github">
+                                <span class="social-icon">📧</span>
+                                <span class="social-text">GitHub</span>
+                            </a>
+                            <a href="#" target="_blank" class="social-link" data-social="linkedin">
+                                <span class="social-icon">💼</span>
+                                <span class="social-text">LinkedIn</span>
+                            </a>
+                            <a href="mailto:" class="social-link" data-social="email">
+                                <span class="social-icon">✉️</span>
+                                <span class="social-text">Email</span>
+                            </a>
+                            <a href="#" target="_blank" class="social-link" data-social="twitter">
+                                <span class="social-icon">🐦</span>
+                                <span class="social-text">Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-box">
+                        <h3>Send a message</h3>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone (optional)" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Message (max 300 words)" class="form-textarea" maxlength="300" rows="4" required></textarea>
+                                <div class="character-count">0/300</div>
+                            </div>
+                            <button type="submit" class="contact-submit">SEND MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section class="blog-section section" id="blog-section">
+                <h2 class="section-title">BLOG</h2>
+                <div class="blog-status">
+                    <h3>In Progress</h3>
+                    <p>Blog content is currently being developed. Check back soon for updates on AI/ML, software development, and tech insights.</p>
+                </div>
+            </section>
+        </div>
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
